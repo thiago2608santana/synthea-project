@@ -1,0 +1,9 @@
+# Ignorar arquivos de dados
+*.csv
+*.xlsx
+synthea_sample_data/
+
+# Ignorar arquivos do Jupyter
+.ipynb_checkpoints/
+
+.DS_Store
