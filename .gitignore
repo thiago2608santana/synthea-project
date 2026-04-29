@@ -7,3 +7,7 @@ synthea_sample_data/
 .ipynb_checkpoints/
 
 .DS_Store
+
+databricks.yml
+.databricks/
+.vscode/
