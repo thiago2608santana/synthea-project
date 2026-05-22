@@ -8,7 +8,6 @@ synthea_sample_data/
 
 .DS_Store
 
-databricks.yml
 .databricks/
 .vscode/
 __builtins__.pyi
