@@ -36,7 +36,7 @@ resources:
       tasks:
         # Task 1: Cria a master_table a partir das tabelas brutas
         - task_key: criar_master_table
-          environment_key: default
+          #  environment_key: default
           spark_python_task:
             python_file: ./src/main.py
 
