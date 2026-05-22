@@ -32,10 +32,11 @@ resources:
         timezone_id: "America/Sao_Paulo"
 
       # Tasks do pipeline (executadas em sequência)
-      # Sem job_clusters: usa Serverless Compute (Free Edition)
+      # Usa Serverless Compute via environment_key (Free Edition)
       tasks:
         # Task 1: Cria a master_table a partir das tabelas brutas
         - task_key: criar_master_table
+          environment_key: default
           spark_python_task:
             python_file: ./src/main.py
 
@@ -43,8 +44,15 @@ resources:
         - task_key: limpar_master_table
           depends_on:
             - task_key: criar_master_table
+          environment_key: default
           spark_python_task:
             python_file: ./src/master_table_clean.py
+
+      # Definição do ambiente serverless
+      environments:
+        - environment_key: default
+          spec:
+            client: "1"
 
       # Notificação em caso de falha (opcional - configure o email)
       # email_notifications:
