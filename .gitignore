@@ -11,3 +11,7 @@ synthea_sample_data/
 databricks.yml
 .databricks/
 .vscode/
+__builtins__.pyi
+
+.gemini/
+extra/
