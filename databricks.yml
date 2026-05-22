@@ -49,15 +49,17 @@ resources:
             python_file: ./src/master_table_clean.py
 
       # Definição do ambiente serverless
-      environments:
-        - environment_key: default
-          #spec:
-          #  client: "1"
+      #environments:
+      #  - environment_key: default
+      #    spec:
+      #      client: "1"
 
-      # Notificação em caso de falha (opcional - configure o email)
-      # email_notifications:
-      #   on_failure:
-      #     - seu-email@exemplo.com
+      # Notificações por e-mail
+      email_notifications:
+        on_success:
+          - thiago2608santana@gmail.com
+        on_failure:
+          - thiago2608santana@gmail.com
 
       # ────────────────────────────────────────
       # Permissões (RBAC)
